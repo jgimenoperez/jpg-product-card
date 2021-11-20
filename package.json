@@ -17,7 +17,8 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "test:watch": "tsdx test --watch"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -47,19 +48,26 @@
     }
   ],
   "devDependencies": {
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
     "@rollup/plugin-image": "^2.1.1",
     "@size-limit/preset-small-lib": "^7.0.3",
     "@types/react": "^17.0.35",
     "@types/react-dom": "^17.0.11",
+    "babel-jest": "^27.3.1",
     "husky": "^7.0.4",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.3.1",
     "postcss": "^8.3.11",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-test-renderer": "^17.0.2",
     "rollup-plugin-postcss": "^4.0.1",
     "size-limit": "^7.0.3",
     "tsdx": "^0.14.1",
     "tslib": "^2.3.1",
-    "typescript": "^4.5.2"
+    "typescript": "^4.5.2",
+    "@types/react-test-renderer": "^17.0.1"
   },
   "keywords": [
     "produt",
@@ -69,5 +77,14 @@
   "repository": {
     "url": "https://github.com/jgimenoperez/jpg-product-card",
     "type": "git"
+  },
+  "dependencies": {
+
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
   }
 }
