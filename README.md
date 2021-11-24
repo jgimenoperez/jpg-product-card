@@ -2,11 +2,12 @@
 
 Este es un paquete de pruebas de despliegue en NPM
 
-### Fernando Herrera
+### JOSE LUIS GIMENO
 
 ## Ejemplo
 ```
-import { ProductCard, ProductImage, ProductTitle, ProductButtons } from 'do-product-card';
+import {ProductButtons,ProductCard,ProductImage,ProductTitle} from 'jpg-product-card'
+
 ```
 
 ```
